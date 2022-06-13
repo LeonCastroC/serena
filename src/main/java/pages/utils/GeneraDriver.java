@@ -17,7 +17,7 @@ public class GeneraDriver {
         chromeDriver = new ChromeDriver();
         String driverPathChrome = "drivers/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", driverPathChrome);
-        chromeDriver.get(archivo.getProperty().getProperty("url"));
+        chromeDriver.get(archivo.getProperty().getProperty("trelloURL"));
         return chromeDriver;
     }
 

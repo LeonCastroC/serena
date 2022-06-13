@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.devtools.v85.webaudio.model.AutomationRate;
+import org.testng.annotations.AfterTest;
 import pages.utils.TomaEvidencia;
 
 import java.io.File;
@@ -18,13 +19,7 @@ public class AfterActions {
     TomaEvidencia tomaEvidencia = new TomaEvidencia();
     private static WebDriver driver;
 
-    @After
-    public static void tearDown() {
-        if (driver != null) {
-            driver.close();
-            driver.quit();
-        }
-    }
+
     @AfterStep
     public void despuesDePaso(Scenario scenario) throws Exception {
         tomaEvidencia.tomarEvidenciaFoto();

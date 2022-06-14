@@ -6,18 +6,18 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class generaDriver {
+public class GeneraDriver {
     public static fileProperties archivo = new fileProperties();
     public static WebDriver chromeDriver;
     public static WebDriver firefoxDriver;
     public static WebDriver edgeDriver;
     public static WebDriver iexplorerDriver;
 
-    public static WebDriver generaChromeDriver () {
+    public WebDriver generaChromeDriver () {
         chromeDriver = new ChromeDriver();
         String driverPathChrome = "drivers/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", driverPathChrome);
-        chromeDriver.get(archivo.getProperty().getProperty("url"));
+        chromeDriver.get(archivo.getProperty().getProperty("trelloURL"));
         return chromeDriver;
     }
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.devtools.v85.webaudio.model.AutomationRate;
 import org.testng.annotations.AfterTest;
+import pages.utils.DriverManager;
 import pages.utils.TomaEvidencia;
 
 import java.io.File;
@@ -21,8 +22,17 @@ public class AfterActions {
 
 
     @AfterStep
-    public void despuesDePaso(Scenario scenario) throws Exception {
+    public void takeSS(Scenario scenario) throws Exception {
         tomaEvidencia.tomarEvidenciaFoto();
+    }
+
+    @After
+    public void tearDown() {
+        WebDriver driver = DriverManager.getDriver();
+        if (driver != null) {
+            driver.close();
+            driver.quit();
+        }
     }
 
 }

@@ -3,8 +3,11 @@ Feature: Validar que el usuario pueda ingresar a la página web de Trello
   -Como usuario quiero ingresar a la página web de Trello
 
 
-  Scenario: Validar que se ingrese a la solución TER
-    Given Se ingresa la URL de Trello en el navegador
-    And Se ingresa "usuario" y dar clic en Continuar
-    #And Se ingresa "<Contraseña>" y dar clic en Iniciar Sesión
-    #Then Dar clic en Empresarial Edenred
+  Scenario: Validar que se pueda iniciar sesión en trello
+    Given El sistema muestra página de Trello
+    When El usuario ingresa su "Usuario"
+    And El usuario da clic en "Continuar"
+
+    And El usuario da clic en "Iniciar Sesión"
+   # And El usuario ingresa su "Contraseña"
+

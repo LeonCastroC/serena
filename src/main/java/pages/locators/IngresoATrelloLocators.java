@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class IngresoATrelloLocators {
+    @FindBy( how= How.CSS, using =".Stack-sc-98g4c-0 span")
+    public static WebElement singUpButton;
 
     @FindBy( how= How.CSS, using =".HlPFP > .UiEmailSignupstyles__InputEmail-sc-9nggyw-1")
     public static WebElement userNameTextField;
@@ -15,6 +17,6 @@ public class IngresoATrelloLocators {
     @FindBy( how= How.XPATH, using ="//*[@id='password']")
     public static WebElement userPassword;
 
-    @FindBy( how= How.XPATH, using ="/html/body/div[1]/div/div/div/div[2]/div[2]/div/section/div[2]/form/div[2]/button/span")
+    @FindBy( how= How.ID, using ="signup-submit")
     public static WebElement loginButton;
 }

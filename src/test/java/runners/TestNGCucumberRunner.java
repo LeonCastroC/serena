@@ -40,9 +40,9 @@ public class TestNGCucumberRunner extends AbstractTestNGCucumberTests {
         driver.manage().window().maximize();
     }
 
-
-    @Test
+    /*@Test
     public void test() throws InterruptedException {
+        System.out.println("hollaaaa");
         sleep(5000);
         driver.findElement(By.cssSelector(".HlPFP > .UiEmailSignupstyles__InputEmail-sc-9nggyw-1")).click();
         sleep(2000);
@@ -51,7 +51,7 @@ public class TestNGCucumberRunner extends AbstractTestNGCucumberTests {
         driver.findElement(By.cssSelector(".gToSzH > button")).click();
 
     }
-
+*/
     @AfterTest
     public void tearDown() {
         if (driver != null) {

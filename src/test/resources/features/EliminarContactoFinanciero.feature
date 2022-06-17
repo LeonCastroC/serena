@@ -17,13 +17,15 @@ Feature: Eliminar un contacto financiero
     And El sistema valida el usuario y muestra el campo para capturar la contraseña
     And El usuario captura el "Contraseña" y da clic en Iniciar sesión
     And El sistema muestra listado de opciones para el "Admin Master"
-    And El usuario selecciona Empresarial EdenRed y da clic en Continuar
+    And El usuario da clic en  Empresarial EdenRed
     When El sistema muestra la pantalla principal de TER
-    When El usuario selecciona módulo de "Configuración"
+    And El usuario selecciona módulo de "Configuración"
+    And El sistema muestra módulo de "Configuración"
     And El usuario selecciona sección de "Mi organización"
+    And El sistema muestra sección de "Mi organización"
     And El usuario selecciona "Contactos financieros"
-    And El sistema muestra un grid con la informacion de un contacto financiero
-    When El usuario da clic en icono de "bote de basura"
+    And El sistema muestra un grid con la información de un contacto financiero
+    When El usuario da clic en icono de "bote de basura" de un contacto financiero
     And El sistema muestra el modal de "Eliminar contacto financiero"
     And El usuario selecciona "aceptar" en el modal de "Eliminar contacto financiero"
     Then El sistema ya no muestra el contacto que fue eliminado

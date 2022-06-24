@@ -3,7 +3,7 @@
 #Realizado por: Vanessa de la Cruz
 #Actualizado por: Vanessa de la Cruz
 
-Feature: Visualización de un contacto financiero
+Feature: Exportar a PDF la consulta de Reportes de Gastos
 
   Background:
     Given El usuario ejecuta el navegador
@@ -11,7 +11,7 @@ Feature: Visualización de un contacto financiero
     And El usuario captura la URL
     When El sistema muestra la página
 
-  Scenario: Visualización de contacto financiero después de dar de alta el departamento al ingresar como Admin Master
+  Scenario: Exportar a PDF la consulta de Reportes de Gastos al ingresar como Admin Master
     And El usuario captura sus credenciales de "AdminMaster" y da clic en Continuar
     When El sistema muestra el campo para capturar la contraseña
     And El usuario captura su contraseña de "AdminMaster" y da clic en Iniciar sesión
@@ -19,13 +19,15 @@ Feature: Visualización de un contacto financiero
     And El usuario da clic en Empresarial EdenRed
     And El sistema muestra módulo de "Dashboard"
 
-    And El usuario selecciona módulo de "Configuración"
-    And El sistema muestra por defecto sección de "Facturación"
+    And El usuario selecciona módulo de "Tarjetas"
+    And El sistema muestra por defecto sección de "Gestionar de saldos"
 
-    And El usuario selecciona sección de "Mi organización"
-    When El sistema muestra sección de "Mi organización"
-    And El usuario selecciona opción de "Contactos financieros"
-    And El sistema muestra la información del nuevo contacto agregado
+    And El usuario selecciona sección de "Consultas" de Tarjetas
+    And El sistema muestra sección de "Consultas" de Tarjetas
+    And El usuario da click en botón "Gastos" de tarjetas
+    And El sistema muestra pantalla de "Reporte de gastos"
+    And El usuario da click en botón "exportar a PDF" consulta de reporte de gastos
+    And El sistema comienza la descarga de reporte de gastos en "Formato PDF"
 
     And El usuario da click en botón "Mi Cuenta"
     When El sistema muestra opciones de usuario

@@ -3,7 +3,7 @@
 #Realizado por: Vanessa de la Cruz
 #Actualizado por: Vanessa de la Cruz
 
-Feature: Eliminar un contacto financiero
+Feature: Consultar movimientos por tarjeta
 
   Background:
     Given El usuario ejecuta el navegador
@@ -11,7 +11,7 @@ Feature: Eliminar un contacto financiero
     And El usuario captura la URL
     When El sistema muestra la página
 
-  Scenario: Eliminar un contacto financiero al ingresar como Admin Master
+  Scenario: Consulta de movimientos por tarjeta al ingresar como Admin Master
     And El usuario captura sus credenciales de "AdminMaster" y da clic en Continuar
     When El sistema muestra el campo para capturar la contraseña
     And El usuario captura su contraseña de "AdminMaster" y da clic en Iniciar sesión
@@ -19,19 +19,13 @@ Feature: Eliminar un contacto financiero
     And El usuario da clic en Empresarial EdenRed
     And El sistema muestra módulo de "Dashboard"
 
-    And El usuario selecciona módulo de "Configuración"
-    And El sistema muestra por defecto sección de "Facturación"
+    And El usuario selecciona módulo de "Tarjetas"
+    And El sistema muestra por defecto sección de "Gestionar de saldos"
 
-     And El usuario selecciona sección de "Mi organización"
-    And El sistema muestra sección de "Mi organización"
-
-    And El usuario selecciona selecciona opción de "Contactos financieros"
-    When El sistema muestra un grid con la información de contactos financieros
-
-    And El usuario da click en icono de "bote de basura" de un contacto financiero
-    And El sistema muestra el modal de "Eliminar contacto financiero"
-    And El usuario da click en botón "Aceptar" en el modal de eliminar contacto financiero
-    And El sistema ya no muestra el contacto que fue eliminado
+    And El usuario selecciona sección de "Consultas" de tarjetas
+    And El sistema muestra sección de "Consultas" de tarjetas
+    And El usuario da click en botón "Movimientos" de tarjetas
+    And El sistema muestra pantalla de "Movimientos" de saldo
 
     And El usuario da click en botón "Mi Cuenta"
     When El sistema muestra opciones de usuario

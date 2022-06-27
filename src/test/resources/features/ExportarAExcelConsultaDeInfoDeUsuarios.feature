@@ -25,8 +25,8 @@ Feature: Exportar a Excel la Consulta de Información de usuarios
     And El usuario selecciona sección de "Consultas" de fondos
     And El sistema muestra sección de "Consultas" de fondos
 
-    And El usuario selecciona opción de "Información de usuario"
-    And El sistema muestra pantalla de "Información de usuario"
+    And El usuario selecciona opción de "Información de usuarios"
+    And El sistema muestra pantalla de "Información de usuarios"
     And El usuario da click en botón "exportar a Excel" consulta de información de usuarios
     And El sistema comienza la descarga de información de usuarios en "Formato excel"
 

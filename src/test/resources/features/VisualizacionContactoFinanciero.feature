@@ -24,6 +24,7 @@ Feature: Visualización de un contacto financiero
 
     And El usuario selecciona sección de "Mi organización"
     When El sistema muestra sección de "Mi organización"
+
     And El usuario selecciona opción de "Contactos financieros"
     And El sistema muestra la información del nuevo contacto agregado
 

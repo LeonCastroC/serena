@@ -43,4 +43,5 @@ Feature: Exportar a excel la consulta de fondos
 
     Examples:
       | número de pedido | status |
+      | 94752763| Procesado |
 

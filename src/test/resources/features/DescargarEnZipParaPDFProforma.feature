@@ -22,11 +22,11 @@ Feature: Descargar en .ZIP para PDF de Proforma
     And El usuario selecciona módulo de "Organización"
     And El sistema muestra por defecto sección de "Gestionar fondos"
 
-    And El usuario selecciona sección de "Consultas"
-    And El sistema muestra sección de "Consultas"
+    And El usuario selecciona sección de "Consultas" de Organización
+    And El sistema muestra sección de "Consultas" de Organización
     And El usuario da clic en "Proformas"
     And El sistema muestra pantalla de "Proformas"
-    And El usuario da click en botón "Descargar PDF"
+    And El usuario da click en botón "Descargar PDF" de alguna orden existente
     Then El sistema comienza la descarga del archivo en tipo .ZIP
 
     And El usuario da click en botón "Mi Cuenta"

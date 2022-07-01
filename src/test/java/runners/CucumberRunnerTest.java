@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
 
 
 @CucumberOptions(
- features = { "./src/test/resources/features/IngresoATrello.feature"},
+ features = { "./src/test/resources/features/Yopmail.feature"},
          glue = {"steps"},
          plugin = {"summary","pretty", "html:target/cucumber-reports/cucumber-pretty"},
          //"json:target/cucumber-reports/CucumberTestReport.json",

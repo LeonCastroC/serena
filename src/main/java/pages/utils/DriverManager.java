@@ -14,7 +14,7 @@ public class DriverManager {
     public static WebDriver setupDriver() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver  = new ChromeDriver();
-        driver.get("https://www.trello.com/");
+        driver.get("https://yopmail.com/es/");
         driver.manage().window().maximize();
 
         return driver;

@@ -17,7 +17,7 @@ public class IngresoATrello {
         public void elUsuarioIngresaSu(String arg0) {
                 switch (arg0){
                         case "Usuario":
-                                ingresoATrelloActions.sendUserEmail("vanedelacruz140895@gmail.com");
+                                ingresoATrelloActions.sendUserEmail("uatmxn11522m22pscs@yopmail.com");
                                 break;
                         case "Contraseña":
                                 ingresoATrelloActions.sendUserPwd("Claro123.");
@@ -38,5 +38,6 @@ public class IngresoATrello {
                                 ingresoATrelloActions.clickLoginButton();
                                 break;
                 }
+
         }
 }
